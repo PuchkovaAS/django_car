@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}My amazing blog{% endblock %}
+
+{% block content %}
+    <p>
+        {% for question in latest_question_list %}
+        <li><a target="_blank" href="/get_ticket/{{ question.id }}">{{ question.question_text }}</a></li>
+        {% endfor %}
+    </p>
+{% endblock %}
+
+
